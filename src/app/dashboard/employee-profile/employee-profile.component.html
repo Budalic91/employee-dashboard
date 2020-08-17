@@ -1,0 +1,11 @@
+<button mat-icon-button [routerLink]="['/dashboard']"><mat-icon>arrow_back</mat-icon></button>
+<mat-card>
+  <mat-card-title>
+    {{employeesData[employeeId].name}} details
+  </mat-card-title>
+  <mat-card-content>
+    <p>Description: {{employeesData[employeeId].description}}</p>
+    <p>{{employeesData[employeeId].status === true? 'Active status' : 'Inactive status'}}</p>
+    <button mat-raised-button color="primary" (click)="changeStatus()">{{employeesData[employeeId].status === true? 'Activate' : 'Deactivate'}}</button>
+  </mat-card-content>
+</mat-card>
